@@ -4,9 +4,11 @@ export const sidebarData = [
   {
     icon: <FaHome />,
     label: "Inicio",
+    ruta: "/"
   },
   {
     icon: <FaChartLine />,
     label: "Datos",
+    ruta: "/User"
   },
 ];

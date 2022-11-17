@@ -36,6 +36,10 @@ body {
 
 .sidebar-menu > * + * {
   margin-left: 10px;
+  color: white;
+}
+.icon{
+  color: #fff;
 }
 
 .sidebar-menu:hover {
