@@ -1,36 +1,34 @@
 import React, { useEffect, useState } from "react";
 
-export const BankCard = ({ icon, url }) => {
+export const Transactions = ({ icon, url }) => {
   const [datos, setData] = useState("");
   const [state, setState] = useState("");
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((res) => {
-        setData(res);
-		fun();		
-      })
+      .then((res) => fun(res))
       .catch((err) => console.error(err));
   }, []);
 
-  const fun = () => {
+  const fun = (res) => {
+    setData(res);
     if (datos != 0) {
-      setState("Ayudaaaa");
+      setState("Ocupada");
     } else {
-      setState("Por el momento estamos bien");
+      setState("Disponible");
     }
   };
 
   return (
-    <div className="card ">
+    <div className="card">
       <div>
-        <h3>¿Necesitas Ayuda?</h3>
+        <h3>Sala disponibilidad</h3>
         {icon}
       </div>
 
       <div className="bank-card">
-        <h4>Ayuda</h4>
+        <h4>Decibelios</h4>
         <p>{state}</p>
       </div>
     </div>

@@ -7,13 +7,12 @@ export const Report = ({ icon, url }) => {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((res) => {
-        setData(res), color();
-      })
+      .then((res) => color(res))
       .catch((err) => console.error(err));
   }, []);
 
-  const color = () => {
+  const color = (res) => {
+    setData(res);
     if (datos < 40) {
       setState("#5FC020");
     } else {
