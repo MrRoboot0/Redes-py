@@ -8,7 +8,8 @@ export const BankCard = ({ icon, url }) => {
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
-        setData(res), fun();
+        setData(res);
+		fun();		
       })
       .catch((err) => console.error(err));
   }, []);
