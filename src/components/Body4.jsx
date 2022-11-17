@@ -12,19 +12,19 @@ export const Body4 = () => {
       <BankCard
           icon={"Sala 3"}
           url={
-            "http://industrial.api.ubidots.com/api/v1.6/devices/sala3/alerta/lv?token=BBFF-ymp7NWxck8P1KcHw5qgNBFLIUosXRy"
+            "http://industrial.api.ubidots.com/api/v1.6/devices/sala3/alerta/lv?token=BBFF-hfb5pFOkOjX845xHlObQxtQGLnIHTx"
           }
         />
         <Transactions
           icon={"Sala 3"}
           url={
-            "http://industrial.api.ubidots.com/api/v1.6/devices/sala3/disponibilidad/lv?token=BBFF-ymp7NWxck8P1KcHw5qgNBFLIUosXRy"
+            "http://industrial.api.ubidots.com/api/v1.6/devices/sala3/disponibilidad/lv?token=BBFF-hfb5pFOkOjX845xHlObQxtQGLnIHTx"
           }
         />
         <Report
           icon={"Sala 3"}
           url={
-            "http://industrial.api.ubidots.com/api/v1.6/devices/sala3/sonido/lv?token=BBFF-ymp7NWxck8P1KcHw5qgNBFLIUosXRy"
+            "http://industrial.api.ubidots.com/api/v1.6/devices/sala3/sonido/lv?token=BBFF-hfb5pFOkOjX845xHlObQxtQGLnIHTx"
           }
         />
         
