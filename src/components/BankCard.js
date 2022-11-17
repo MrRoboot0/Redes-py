@@ -31,7 +31,6 @@ export const BankCard = ({ icon, url }) => {
       </div>
 
       <div className="bank-card">
-        <h4>Ayuda</h4>
         <p>{state}</p>
       </div>
     </div>

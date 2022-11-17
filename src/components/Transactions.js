@@ -31,7 +31,6 @@ export const Transactions = ({ icon, url }) => {
       </div>
 
       <div className="bank-card">
-        <h4>Decibelios</h4>
         <p>{state}</p>
       </div>
     </div>
