@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  
+ 
+}
+
+.sidebar {
+  background: #292a2e;
+  color: #fff;
+  height: 100%;
+  padding: 5rem 2rem;
+}
+
+.sidebar > * + * {
+  margin-top: 1rem;
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar-menu > * + * {
+  margin-left: 10px;
+}
+
+.sidebar-menu:hover {
+  background: rgba(0, 0, 0, 0.432);
+}
+
+.body {
+ 
+  
+  padding: 2rem;
+  position: absolute;
+  width: 80%;
+  left: 11%;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.grid {
+  display: grid;
+  margin: 1.5rem 0;
+  gap: 20px;
+}
+
+.card {
+  background: #292a2e;
+  padding: 1.5rem;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(19, 7, 7, 0.247);
+}
+
+.card div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bank-card {
+  background: linear-gradient(95deg, #ff6b00, #5c2b0b);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.bank-card h4 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.bank-card .star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.bank-card .star span:not(:last-child) {
+  display: block;
+  font-size: 20px;
+}
+
+.bank-card p {
+  margin-bottom: 10px;
+}
+
+.bank-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.bank-card-footer p span {
+  display: block;
+}
+
+.mastercard-logo {
+  display: flex;
+}
+
+.mastercard-logo > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.mastercard-logo div:nth-child(1) {
+  background: #f92b0ba4;
+  z-index: 5;
+}
+.mastercard-logo div:nth-child(2) {
+  background: #fbc913a2;
+  margin-left: -10px;
+}
+
+.trans-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trans-card > div {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.trans-card_i {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.trans-card_i h4 {
+  font-size: 14px;
+}
+
+.trans-card_i p {
+  font-size: 12px;
+}
+
+.trans-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .span-3 {
+    grid-row: 2 / 4;
+  }
+ 
+}
