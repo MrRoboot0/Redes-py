@@ -16,7 +16,7 @@ export const BankCard = ({ icon, url }) => {
 
   const fun = (data) => {
     setData(data);
-    if (datos !== 0) {
+    if (data != "0") {
       setState("Ayudaaaa");
     } else {
       setState("Por el momento estamos bien");

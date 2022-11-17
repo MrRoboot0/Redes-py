@@ -16,7 +16,7 @@ export const Transactions = ({ icon, url }) => {
 
   const fun = (res) => {
     setData(res);
-    if (datos !== 0) {
+    if (res != "0") {
       setState("Ocupada");
     } else {
       setState("Disponible");

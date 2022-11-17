@@ -16,7 +16,7 @@ export const Report = ({ icon, url }) => {
 
   const color = (res) => {
     setData(res);
-    if (datos <= 40) {
+    if (res < 40) {
       setState("#5FC020");
     } else {
       setState("#C02020");
