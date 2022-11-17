@@ -5,15 +5,18 @@ export const Transactions = ({ icon, url }) => {
   const [state, setState] = useState("");
 
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => fun(res))
-      .catch((err) => console.error(err));
+    const interval = setInterval(() => {
+      fetch(url)
+        .then((res) => res.json())
+        .then((res) => fun(res))
+        .catch((err) => console.error(err));
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const fun = (res) => {
     setData(res);
-    if (datos != 0) {
+    if (datos !== 0) {
       setState("Ocupada");
     } else {
       setState("Disponible");

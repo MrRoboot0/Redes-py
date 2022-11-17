@@ -1,4 +1,3 @@
-import { AiOutlinePlus } from "react-icons/ai";
 import { BankCard } from "./BankCard";
 import { Header } from "./Header";
 import { Report } from "./Report";

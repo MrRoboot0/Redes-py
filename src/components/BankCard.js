@@ -5,15 +5,18 @@ export const BankCard = ({ icon, url }) => {
   const [state, setState] = useState("");
 
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => fun(data))
-      .catch((err) => console.error(err));
+    const interval = setInterval(() => {
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => fun(data))
+        .catch((err) => console.error(err));
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const fun = (data) => {
     setData(data);
-    if (datos != 0) {
+    if (datos !== 0) {
       setState("Ayudaaaa");
     } else {
       setState("Por el momento estamos bien");

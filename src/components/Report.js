@@ -1,29 +1,25 @@
 import React, { useEffect, useState } from "react";
-import Swal from "sweetalert2";
+
 export const Report = ({ icon, url }) => {
   const [datos, setData] = useState("");
   const [state, setState] = useState("");
 
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => color(res))
-      .catch((err) => console.error(err));
+    const interval = setInterval(() => {
+      fetch(url)
+        .then((res) => res.json())
+        .then((res) => color(res))
+        .catch((err) => console.error(err));
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const color = (res) => {
     setData(res);
-    if (datos < 40) {
+    if (datos <= 40) {
       setState("#5FC020");
     } else {
       setState("#C02020");
-      Swal.fire({
-        title: "El ruido es muy alto tienes un strike",
-        text: "Modula tu nivel de ruido",
-        icon: "warning",
-
-        confirmButtonColor: "#3085d6",
-      });
     }
   };
 
